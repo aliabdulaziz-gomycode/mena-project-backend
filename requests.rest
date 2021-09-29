@@ -1,0 +1,44 @@
+### Register
+PUT http://localhost:3300/register
+Content-Type: application/json
+
+{
+    "name": "Ali Abdulaziz",
+    "email": "ali@example.com",
+    "password": "Pa$$w0rd",
+    "confirmation": "Pa$$w0r"
+}
+
+### Login
+POST http://localhost:3300/login
+Content-Type: application/json
+
+{
+    "email": "ali@example.com",
+    "password": "Pa$$w0rd2"
+}
+
+### Logout
+POST http://localhost:3300/logout
+
+### Password Reset
+PUT http://localhost:3300/password-reset
+Content-Type: application/json
+
+{
+    "email": "ali@example.com"
+}
+
+### New Password
+PATCH http://localhost:3300/new-password
+Content-Type: application/json
+
+{
+    "token": "f408adf38301ecddc6877550162703aa47aec0112562c1d6f5bd00b4331c9978",
+    "password": "Pa$$w0rd2",
+    "confirmation": "Pa$$w0rd2"
+}
+
+### Profile
+GET http://localhost:3300/profile
+Content-Type: application/json
